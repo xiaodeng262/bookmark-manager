@@ -1,8 +1,24 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+## 项目介绍
 
-## Getting Started
+书签管理器，利用AI针对本地浏览器收藏夹中页签重新分类。
 
-First, run the development server:
+## 技术架构
+
+使用的 Plasmo 框架完成， React + TypeScript。
+
+## 目前面临问题
+
+想实现一键针对所有的页签重新分类，但是面临上千页签整理时存在一下问题：
+
+- 1.token限制问题，不能一次性完成。
+- 2.分批处理可能会存在丢失页签的问题。
+- 3.如果分批处理，可能存在分类重叠的问题。
+
+希望有经验的大佬指教，小白一枚！
+
+## 维护
+
+### 1. 本地运行
 
 ```bash
 pnpm dev
@@ -10,24 +26,10 @@ pnpm dev
 npm run dev
 ```
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
-
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
-
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
-
-## Making production build
-
-Run the following:
+### 2. 打包
 
 ```bash
 pnpm build
 # or
 npm run build
 ```
-
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
-
-## Submit to the webstores
-
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
