@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Button, Tooltip, TreeSelect} from 'antd';
+import {Button, message, Tooltip, TreeSelect} from 'antd';
 import {GithubOutlined, PoweroffOutlined} from "@ant-design/icons";
 import OpenAI from "openai";
 import openAIConfig from './config/openAIConfig';
@@ -100,8 +100,13 @@ const Popup = () => {
 
     };
 
-    const labelOrganization = async (index: number, folders: object) => {
+    const labelOrganization = async (index: number, folders: any) => {
         try {
+            console.log(folders)
+            if (folders == null || folders.length == 0) {
+                message.error('请选择需要整理的收藏夹!');
+                return;
+            }
             setButtMes(1)
             const rq = await sentOpenAI(folders);
             const bookmarks = JSON.parse(rq.replace("```json", "").replace("```", "").trim());
@@ -250,7 +255,7 @@ const Popup = () => {
                 />
             </div>
 
-            <div style={{marginTop:'20px',fontSize:13}}>
+            <div style={{marginTop: '20px', fontSize: 13}}>
                 <span>
                     Ps：插件调用OpenAI gpt-3.5，如整理失败，可重新尝试整理。暂只支持指定收藏夹整理，
                     项目已开源，欢迎各位大佬指点！

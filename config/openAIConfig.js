@@ -1,6 +1,6 @@
 const openAiConfig = {
-    openKey: 'ak-i9choaHHLcYHv1wpBEnoCS23Vxw63hN7FsXcpKNtCZSLIaDD',
-    baseURL: 'https://api.nextapi.fun/openai/v1',
+    openKey: '***',
+    baseURL: '**',
     model: 'gpt-3.5-turbo-1106',
     prompt: `
     根据MECE原则，对以下网页页签标题进行精致的分类。我希望分的很细，例如娱乐，娱乐下面会有游戏，游戏又分为休闲游戏、养成游戏..
