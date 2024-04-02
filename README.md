@@ -6,6 +6,16 @@
 
 使用的 Plasmo 框架完成， React + TypeScript。
 
+
+## 效果图
+![img.png](img/img.png)
+
+![img_1.png](img_1.png)
+
+![img_2.png](img_2.png)
+
+![img_3.png](img_3.png)
+
 ## 目前面临问题
 
 想实现一键针对所有的页签重新分类，但是面临上千页签整理时存在一下问题：
