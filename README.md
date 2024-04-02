@@ -10,11 +10,11 @@
 ## 效果图
 ![img.png](img/img.png)
 
-![img_1.png](img_1.png)
+![img_1.png](img/img_1.png)
 
-![img_2.png](img_2.png)
+![img_2.png](img/img_2.png)
 
-![img_3.png](img_3.png)
+![img_3.png](img/img_3.png)
 
 ## 目前面临问题
 
@@ -26,9 +26,13 @@
 
 希望有经验的大佬指教，小白一枚！
 
+<img alt="img.png" src="img/vx.png" width="200"/>
+
 ## 维护
 
 ### 1. 本地运行
+在 config -> [openAIConfig.js](config%2FopenAIConfig.js)
+中填入你的OpenAI Key 和 baseURL 即可。
 
 ```bash
 pnpm dev

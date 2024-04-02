@@ -162,7 +162,7 @@ const Popup = () => {
 
     const handleIconClick = () => {
         // 使用 window.open 打开新的标签页跳转到指定的 GitHub 页面
-        window.open('https://github.com/your-username/your-repository', '_blank');
+        window.open('https://github.com/xiaodeng262/bookmark-manager', '_blank');
     };
 
     const getButtonText = () => {
